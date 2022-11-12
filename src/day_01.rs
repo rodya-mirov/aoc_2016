@@ -1,13 +1,13 @@
-pub fn day_1a() -> String {
+pub fn a() -> String {
     let contents =
         std::fs::read_to_string("src/input_1.txt").expect("Should be able to read the file");
 
-    let val = day_1a_with_input(&contents);
+    let val = a_with_input(&contents);
 
     format!("{}", val.0.abs() + val.1.abs())
 }
 
-fn day_1a_with_input(input: &str) -> (i32, i32) {
+fn a_with_input(input: &str) -> (i32, i32) {
     // blocks east
     let mut x = 0;
 
@@ -45,16 +45,16 @@ fn day_1a_with_input(input: &str) -> (i32, i32) {
     (x, y)
 }
 
-pub fn day_1b() -> String {
+pub fn b() -> String {
     let contents =
         std::fs::read_to_string("src/input_1.txt").expect("Should be able to read the file");
 
-    let val = day_1b_with_input(&contents);
+    let val = b_with_input(&contents);
 
     format!("{}", val.0.abs() + val.1.abs())
 }
 
-fn day_1b_with_input(input: &str) -> (i32, i32) {
+fn b_with_input(input: &str) -> (i32, i32) {
     let mut seen = std::collections::HashSet::new();
 
     seen.insert((0, 0));
@@ -121,12 +121,12 @@ fn right(dx: &mut i32, dy: &mut i32) {
 #[cfg(test)]
 mod tests_1a {
     fn test_1a(input: &str, expected: (i32, i32)) {
-        let actual = super::day_1a_with_input(input);
+        let actual = super::a_with_input(input);
         assert_eq!(actual, expected);
     }
 
     fn test_1b(input: &str, expected: (i32, i32)) {
-        let actual = super::day_1b_with_input(input);
+        let actual = super::b_with_input(input);
         assert_eq!(actual, expected);
     }
 

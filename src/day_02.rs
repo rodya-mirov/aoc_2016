@@ -1,11 +1,11 @@
-pub fn day_2a() -> String {
+pub fn a() -> String {
     let contents = std::fs::read_to_string("./src/input_2.txt").unwrap();
-    let actual = day_2a_with_input(&contents);
+    let actual = a_with_input(&contents);
 
     format!("{}", actual)
 }
 
-fn day_2a_with_input(input: &str) -> String {
+fn a_with_input(input: &str) -> String {
     let mut out: String = "".to_string();
 
     let mut x = 1;
@@ -37,14 +37,14 @@ fn day_2a_with_input(input: &str) -> String {
     out
 }
 
-pub fn day_2b() -> String {
+pub fn b() -> String {
     let contents = std::fs::read_to_string("./src/input_2.txt").unwrap();
-    let actual = day_2b_with_input(&contents);
+    let actual = b_with_input(&contents);
 
     format!("{}", actual)
 }
 
-fn day_2b_with_input(input: &str) -> String {
+fn b_with_input(input: &str) -> String {
     let mut out: String = "".to_string();
 
     let mut x = 0;
@@ -106,7 +106,7 @@ fn day_2b_with_input(input: &str) -> String {
 #[cfg(test)]
 mod tests {
     fn test_2a(input: &str, expected: &str) {
-        let actual = super::day_2a_with_input(input);
+        let actual = super::a_with_input(input);
 
         assert_eq!(actual.as_str(), expected);
     }
@@ -123,7 +123,7 @@ UUUUD",
     }
 
     fn test_2b(input: &str, expected: &str) {
-        let actual = super::day_2b_with_input(input);
+        let actual = super::b_with_input(input);
 
         assert_eq!(actual.as_str(), expected);
     }
