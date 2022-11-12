@@ -89,7 +89,7 @@ fn day_1b_with_input(input: &str) -> (i32, i32) {
             }
         }
 
-        for _ in 0 .. val {
+        for _ in 0..val {
             x += dx;
             y += dy;
 
